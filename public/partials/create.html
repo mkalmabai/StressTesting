@@ -1,0 +1,45 @@
+<div>
+    <div class="lead text-center">
+        Add New User
+    </div>
+    <div class="alert alert-success" ng-show="alert.show">
+        <button type="button" class="close" ng-click="alert.show=false"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        {{ alert.message }}
+    </div>
+    <form class="form-group" ng-submit="add(user)">
+        <div class="form-group col-lg-6">
+            <label for="username">Username</label>
+            <input type="text" id="username" ng-model="user.username" class="form-control" title="Enter username" required/>
+        </div>
+        <div class="form-group col-lg-6">
+            <label for="password">Password</label>
+            <input type="password" id="password" ng-model="user.password" class="form-control" title="Enter password" required/>
+        </div>
+        <div class="form-group col-lg-6">
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" ng-model="user.firstname" class="form-control" title="Provide first name" required/>
+        </div>
+        <div class="form-group col-lg-6">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" ng-model="user.lastname" class="form-control" />
+        </div>
+        <div class="form-group col-lg-6">
+            <label for="email">Email</label>
+            <input type="email" id="email" ng-model="user.email" title="" class="form-control" required/>
+        </div>
+        <div class="form-group col-lg-6">
+            <label for="zip">Zipcode</label>
+            <input type="number" id="zip" ng-model="user.zipcode" class="form-control" maxlength="6" required/>
+        </div>
+        <div class="form-group col-lg-6">
+            <label for="phone">Phone</label>
+            <input type="phone" id="phone" ng-model="user.mobile" class="form-control" required/>
+        </div>
+        
+        <div class="form-group col-lg-12 pull-left">
+            <button type="reset" class="btn btn-danger">Reset</button>
+            <button type="submit" class="btn btn-success">Add</button>
+        </div>
+        
+    </form>    
+</div>
